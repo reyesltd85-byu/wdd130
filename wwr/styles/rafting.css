@@ -1,6 +1,5 @@
 :root {
     --primary-color: #055a05;
-    --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", "Georgia", serif;
@@ -85,7 +84,7 @@ h1 {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 16px;
 }
