@@ -1,5 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main {
     max-width: 840px;
+    overflow: auto;
+}
+
+main img {
+    /* you most likely will have other CSS declarations here */
+    float: right;
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
 }
 
 aside {
@@ -12,6 +29,13 @@ aside {
     text-align: center;
 }
 
+aside img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
 img {
     width: 150px;
     height: auto;
@@ -20,33 +44,9 @@ img {
     box-shadow: 0 0 30px gray;
 }
 
-
-
-aside img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-}
-
 p {
     padding: 0;
 }
-
-footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-}
-
 
 nav {
     background-color: darkblue;
@@ -63,4 +63,39 @@ h1 {
     color: steelblue;
 }
 
+/* Class Selectors */
 
+aside {
+    width: 20em;
+    text-align: center;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+}
+
+main p {
+    clear: both;
+    overflow: auto;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0, 0, 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+.indent {
+    margin-left: 1rem;
+}
