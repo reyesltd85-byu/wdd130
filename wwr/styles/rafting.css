@@ -204,7 +204,6 @@ footer {
     color: rgb(var(--accent2-color));
     text-align: center;
     position: relative;
-    background-image: url("");
     background-repeat: no-repeat;
     background-position: right center;
     /* or left center */
@@ -221,16 +220,6 @@ footer p {
     grid-row: 1/2;
     text-align: left;
     color: rgb(var(--accent2-color));
-}
-
-.footer-bg {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 80px;
-    opacity: 0.2;
-    /* makes it subtle/clear */
 }
 
 footer nav {
