@@ -200,10 +200,20 @@ footer {
     max-width: 1440px;
     align-items: center;
     padding: 24px 0px 24px 24px;
-    background-color: rgb(var(--secondary-color));
+    background: var(--primary-dark);
+    color: rgb(var(--accent2-color));
+    text-align: center;
+    position: relative;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* or left center */
+    background-size: contain;
+    /* keeps it clear and not stretched */
+    /* background-color: rgb(var(--secondary-color));
     color: rgb(var(--accent2-color));
     background: var(--primary-dark);
-    text-align: center;
+    text-align: center; */
 }
 
 footer p {
@@ -211,6 +221,16 @@ footer p {
     grid-row: 1/2;
     text-align: left;
     color: rgb(var(--accent2-color));
+}
+
+.footer-bg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    opacity: 0.2;
+    /* makes it subtle/clear */
 }
 
 footer nav {
