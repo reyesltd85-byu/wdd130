@@ -405,3 +405,262 @@ input[type="checkbox"] {
     color: rgb(var(--accent3-color) / .85);
     font-style: italic;
 }
+
+:root {
+    --primary: #d7bdf9;
+    --primary-dark: #b08ae6;
+    --text: #333;
+    --gray: #555;
+    --light: #f9f7fd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f8f5fc;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header / Nav */
+header {
+    background: var(--primary);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-dark);
+}
+
+/* Main Content */
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.left-column h1 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+}
+
+.company-info {
+    margin-bottom: 2rem;
+    color: var(--gray);
+}
+
+.company-info p {
+    margin: 0.6rem 0;
+}
+
+/* Form */
+form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 1.4rem 0 0.5rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.radio-group {
+    margin: 1.4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.radio-group label {
+    margin: 0;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.checkbox {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+button {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1.5rem;
+}
+
+button:hover {
+    background: #9a6ed9;
+    transform: translateY(-1px);
+}
+
+/* Map placeholder */
+.map-placeholder {
+    background: #e0e0e0;
+    height: 320px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #777;
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+    position: relative;
+}
+
+.map-pin {
+    font-size: 3.5rem;
+    position: absolute;
+}
+
+/* Team section */
+.team-section {
+    background: var(--primary);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.team-section h2 {
+    margin-bottom: 2.5rem;
+    color: var(--primary-dark);
+}
+
+.team-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+.employee-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.employee-img {
+    width: 110px;
+    height: 110px;
+    background: #e0d4f5;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem;
+    display: grid;
+    place-items: center;
+    font-size: 2.8rem;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.social-icons {
+    margin: 1.5rem 0 2rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+}
