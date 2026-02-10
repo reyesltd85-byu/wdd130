@@ -11,6 +11,11 @@
     --accent3-color: 0 0 0;
     --body-font: Arial, Helvetica, sans-serif;
     --heading-font: "Trebuchet MS", Trebuchet, Arial, sans-serif;
+    --primary: #d7bdf9;
+    --primary-dark: #b08ae6;
+    --text: #333;
+    --gray: #555;
+    --light: #f9f7fd;
 }
 
 * {
@@ -24,6 +29,8 @@ body {
     color: var(--primary-color);
     max-width: 1440px;
     margin: 0 auto;
+    background: #f8f5fc;
+    line-height: 1.6;
 }
 
 header,
@@ -126,6 +133,9 @@ nav ul {
     align-items: center;
     width: 100%;
     gap: 8px 0;
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
 }
 
 header nav a {
@@ -194,6 +204,10 @@ footer {
     padding: 24px 0px 24px 24px;
     background-color: rgb(var(--secondary-color));
     color: rgb(var(--accent2-color));
+    background: var(--primary-dark);
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+    text-align: center;
 }
 
 footer p {
@@ -304,6 +318,10 @@ form {
     background-color: rgb(var(--secondary-color));
     padding: 0 4rem;
     color: rgb(var(--accent2-color));
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
 
 form h2 {
@@ -366,9 +384,6 @@ input[type="submit"] {
     background: none;
     border: none;
     box-shadow: none;
-}
-
-button {
     display: block;
     font-size: 1rem;
     padding: 8px 24px;
@@ -385,6 +400,8 @@ button:hover {
     border: 1px rgb(var(--primary-color)) solid;
     border-radius: 4px;
     font-weight: 700;
+    background: #9a6ed9;
+    transform: translateY(-1px);
 }
 
 label[for="subscribe"],
@@ -404,27 +421,6 @@ input[type="checkbox"] {
 ::placeholder {
     color: rgb(var(--accent3-color) / .85);
     font-style: italic;
-}
-
-:root {
-    --primary: #d7bdf9;
-    --primary-dark: #b08ae6;
-    --text: #333;
-    --gray: #555;
-    --light: #f9f7fd;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    background: #f8f5fc;
-    color: var(--text);
-    line-height: 1.6;
 }
 
 /* Header / Nav */
@@ -455,12 +451,6 @@ nav {
     justify-content: center;
     color: white;
     font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
 }
 
 nav a {
@@ -499,14 +489,6 @@ nav a.active {
 
 .company-info p {
     margin: 0.6rem 0;
-}
-
-/* Form */
-form {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -565,11 +547,6 @@ button {
     margin-top: 1.5rem;
 }
 
-button:hover {
-    background: #9a6ed9;
-    transform: translateY(-1px);
-}
-
 /* Map placeholder */
 .map-placeholder {
     background: #e0e0e0;
@@ -625,14 +602,6 @@ button:hover {
     display: grid;
     place-items: center;
     font-size: 2.8rem;
-}
-
-/* Footer */
-footer {
-    background: var(--primary-dark);
-    color: white;
-    padding: 3rem 2rem 1.5rem;
-    text-align: center;
 }
 
 .social-icons {
